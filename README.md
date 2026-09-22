@@ -52,17 +52,28 @@ The lab simulates a real-world SOC environment with endpoint monitoring, threat 
 
 ## Screenshots
 
-> Place your screenshots in the `Screenshots/` folder
+### 1. Vulnerability Inventory
+![Vulnerability Inventory](Screenshots/01-Vulnerability-Inventory.png)
 
-### Vulnerability Detection Dashboard
-- 9 Critical
-- 463 High
-- 139 Medium
-- 5 Low
+### 2. Vulnerability Dashboard
+![Vulnerability Dashboard](Screenshots/02-Vulnerability-Dashboard.png)
 
-### Agent Overview
-- Win11-Agent: Active
-- Real-time events + SCA score
+**Summary:** 9 Critical | 463 High | 139 Medium | 5 Low
+
+### 3. Agent Overview
+![Agent Overview](Screenshots/03-Agent-Overview.png)
+
+### 4. Agents Status
+![Agents Active](Screenshots/04-Agents-Active.png)
+
+### 5. Threat Hunting Events
+![Threat Hunting](Screenshots/05-Threat-Hunting.png)
+
+### 6. Main Dashboard
+![Main Dashboard](Screenshots/06-Main-Dashboard.png)
+
+### 7. File Integrity Monitoring (FIM)
+![FIM Events](Screenshots/07-FIM-Events.png)
 
 ---
 
