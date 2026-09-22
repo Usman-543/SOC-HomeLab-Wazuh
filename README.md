@@ -15,14 +15,29 @@ The lab simulates a real-world SOC environment with endpoint monitoring, threat 
 
 ## Architecture
 
-- **Wazuh Server** (All-in-One): Manager + Indexer + Dashboard running on Ubuntu Server 24.04 (VirtualBox)
-- **Windows 11 Endpoint**: Agent installed with Sysmon for advanced telemetry
-- **Network**: Bridged networking so both VMs can communicate
+```
++---------------------------------------------------------------+
+|                        VirtualBox Host                        |
+|                                                               |
+|  +---------------------------+     +------------------------+ |
+|  |   Windows 11 Endpoint     |     |   Ubuntu Server 24.04  | |
+|  |   (Win11-Agent)           |     |   Wazuh All-in-One     | |
+|  |                           |     |                        | |
+|  |  - Wazuh Agent            |     |  - Wazuh Manager       | |
+|  |  - Sysmon                 |---->|  - Wazuh Indexer       | |
+|  |  - FIM                    |     |  - Wazuh Dashboard     | |
+|  |  - Vulnerability Scan     |     |                        | |
+|  |                           |     |  IP: 192.168.56.103    | |
+|  |  IP: 192.168.56.101       |     |                        | |
+|  +---------------------------+     +------------------------+ |
+|                                                               |
++---------------------------------------------------------------+
+```
 
-```
-[ Windows 11 Agent + Sysmon ]  --->  [ Wazuh Manager / Indexer / Dashboard ]
-         (192.168.56.101)                    (192.168.56.103)
-```
+**Components:**
+- **Wazuh Server** (All-in-One): Manager + Indexer + Dashboard on Ubuntu Server 24.04
+- **Windows 11 Endpoint**: Agent + Sysmon for advanced telemetry
+- **Network**: Bridged / Host-Only networking for communication between VMs
 
 ---
 
